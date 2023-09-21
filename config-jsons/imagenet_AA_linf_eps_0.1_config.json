@@ -1,0 +1,23 @@
+{
+  "_comment1": "===== DATASET CONFIGURATION =====",
+  "dset_name": "imagenet_sub",
+  "dset_config": {},
+  "_comment2": "===== EVAL CONFIGURATION =====",
+  "num_eval_examples": 1000,
+  "acc_drop_alpha": 0.1,
+  "_comment3": "=====ADVERSARIAL EXAMPLES CONFIGURATION=====",
+  "attack_name": "SquareAttack",
+  "attack_config": {
+    "batch_size" : 100,
+    "name": "Square",
+    "epsilon": 0.1,
+    "p": "inf",
+    "p_init": 0.05,
+    "max_loss_queries": 10000
+  },
+  "device": "gpu",
+  "modeln": "vit_large_patch16_224",
+  "target": false,
+  "target_type": "median",
+  "seed": 123
+}
